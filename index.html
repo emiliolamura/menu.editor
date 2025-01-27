@@ -123,25 +123,18 @@
             </div>
         </div>
 
-        <div id="mobile-warning1" class="alertTitle">
-
-            Attenzione
-        </div>
         
     <div id="mobile-warning" class="alert">
 
         Aprire il link da Desktop
     </div>
 
-    <div id="mobile-warning1" class="alertTitle">
-
-        Attenzione
-    </div>
+    
 
     <script>
         if (window.innerWidth <= 768) {
             document.getElementById('mobile-warning').style.display = 'block';
-            document.getElementById('mobile-warning1').style.display = 'block';
+            document.getElementById('main-content').style.display = 'none';
 
         }
     </script>
