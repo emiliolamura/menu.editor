@@ -45,7 +45,7 @@ function updateInvited() {
 function updatePortate() {
     let textarea = document.getElementById('portateLista');
    
-    portate = textarea.value.split(',').map(item => item.trim());
+    portate = textarea.value.split(';').map(item => item.trim());
     spazio = (300-h)/portate.length;
 
 }
