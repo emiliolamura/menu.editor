@@ -30,6 +30,14 @@ spazio = (300-h)/portate.length
 
 
 /////////////////////
+
+function updateTitolo() {
+    let textareaTitolo = document.getElementById('titoloLista');
+    titolo = textareaTitolo.value;
+    redraw();
+}
+
+
 function updateInvited() {
     let checkbox = document.getElementById('invitedCheck');
     let guestInput = document.getElementById('invitedGuest');
@@ -122,7 +130,8 @@ function setup() {
   bianco = color(255)
 
  /////////////////////////////
-
+ let textareaTitolo = document.getElementById('titoloLista');
+ textareaTitolo.addEventListener('input', updateTitolo);
 
     let checkbox = document.getElementById('invitedCheck');
     checkbox.addEventListener('change', updateInvited);
@@ -148,7 +157,7 @@ function setup() {
    updateData();
    updateEvento();
    updateInvited()
-
+   updateTitolo();
     
 
 
@@ -172,9 +181,9 @@ background(255, 0)
   
                     fill(rosso)
                     textAlign(CENTER)
-                    textSize(47)
+                    textSize(35)
                     textFont(toninoFont);
-                    text('Menù', base/2, 262);
+                    text(titolo, base/2, 262);
 
 
 
@@ -206,7 +215,7 @@ background(255, 0)
                     textAlign(CENTER)
                     textSize(14)
                     textFont(toninoFont);
-                    text(sede+',', base/2, 623-h);
+                    text(sede, base/2, 623-h);
                     text(data, base/2, 640-h);
 
 
